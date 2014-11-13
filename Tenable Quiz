@@ -1,0 +1,14 @@
+//Author: Cesar Navas
+//String to an Integer
+
+#include<stdio.h> //Main Library file
+#include<string.h> //Library file for string manipulation 
+int main()
+{
+	int i;
+	char * string = "1024c";
+	i = atoi(string);
+	printf("%d\n", i);
+	system("PAUSE");
+	return 0;
+}
