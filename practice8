@@ -1,0 +1,23 @@
+//practice 8
+#include<stdio.h>
+#include<math.h>
+
+
+int main()
+{
+	float num, result;
+	printf("Enter a number to find its square root: ");
+	scanf("%f", &num);
+	//use an if statement with no else to make sure that the number is greater or equal to 0
+	if (num >= 0)
+	{
+		result = sqrt(num);
+		printf("The square root of %.2f is %.2f\n", num, result);
+	}
+	else 
+		printf("INVALID ENTRY!\n");
+	
+	//print the result to the screen (do not include this in the if statement)
+	printf("End of program!");
+	return 0;
+}
