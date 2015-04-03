@@ -1,0 +1,23 @@
+//squareRootV1.c
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+    //decalre the variable that you want to find
+    //its square root
+    float num;
+    
+    //ask the user th enter the number
+    printf("Enter a value to find its square root: ");
+    scanf("%f", &num);
+    
+    //evaluate and validate before you calculate and print
+    if ( num >= 0)
+       printf("Square root of %.2f = %.2f\n", num , sqrt(num));
+    else
+        printf("Can't square root a negative number!\n");
+    
+    system("PAUSE");
+    return 0;
+}
