@@ -1,0 +1,46 @@
+//Author: Cesar Navas
+//quadraticC1.c
+
+
+#include<stdio.h>
+#include<math.h>
+
+
+int main()
+{
+	//data declaration
+	float a, b, c;
+	float deter;
+	float x1, x2, r1, r2, i1, i2;	
+	
+	//data assignment
+	printf("Enter the constant a: ");
+	scanf("%f", &a);
+	printf("Enter the constant b: ");
+	scanf("%f", &b);
+	printf("Enter the constant c: ");
+	scanf("%f", &c);
+
+	
+     deter = (b * b)  - 4 * (a * c);    
+     if (deter > 0 )
+     { 
+     	r1 = (-b + sqrt(deter)) / (2 * a);
+     	r2 = (-b - sqrt(deter)) / (2 * a);
+     	printf("The roots are: %.2f and %.2f\n", r1, r2);
+     }
+     else
+     	if(deter == 0)
+     	{
+     		r1 = r2 = -b / (2 * a);
+     		printf("Roots are: %.2f and %.2f", r1, r2);
+     	}
+     	else
+     	{
+     		x1 = -b / (2 * a);
+     		i1 = sqrt(-deter) / (2 *a);
+     		printf("Roots are: %.2f+%.2fi and %.2f-%.2fi\n", x1, i1, x1, i1);
+     	}
+	system("PAUSE");
+	return 0;
+}
