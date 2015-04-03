@@ -1,0 +1,29 @@
+//rectangleV1.c
+#include<stdio.h>
+float result;
+
+void rec_area(float *sideA_ptr, float *sideB_ptr)
+{
+     result = *sideA_ptr * *sideB_ptr;
+}
+
+int main()
+{
+    //data declaration
+    float width, length;
+    float *w_ptr, *ln_ptr;
+    
+    //data assignment
+    printf("Enter the length of the rectangle: ");
+    scanf("%f", &length);
+    printf("Enter the width of the rectangle: ");
+    scanf("%f", &width);
+    w_ptr = &width;
+    ln_ptr = &length;
+    //data processing
+    rec_area(w_ptr, ln_ptr);
+    //data output
+    printf("The area of this rectangle = %.2f\n", result);
+    system("PAUSE");
+    return 0;
+}
