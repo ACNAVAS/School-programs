@@ -1,0 +1,51 @@
+//balance.c Author: Cesar
+#include<stdio.h> //for standard input output
+#include<math.h>
+void calculateBalance(float *balancePointer, int itemNumber)  
+{	
+	float price;
+	float TaxPrice;
+	const float tax = 0.07;
+	printf("Enter the price the item %d : $", itemNumber + 1);
+	scanf("%f", &price);
+	//Price with tax
+	TaxPrice = price + (price * tax);
+	//find the new balance including tax
+	
+	*balancePointer = *balancePointer + TaxPrice;
+	printf("Subttotal=$%.2f\n", *balancePointer);
+}
+
+int main()
+{
+	//declare the appropriate variable that you will need
+	float balance, *balancePointer;	
+	balancePointer=&balance;
+	int itemNumber;
+	int items, i;
+
+	//initialize the value held in balance to zero
+	balance = 0.0;
+	printf("How many items are you entering into the system?: ");
+	scanf("%d", &items);
+	if (items > 0)
+	{
+		for(i = 0; i < items; i++)
+		{	//call the function calculateBalance(……)
+			calculateBalance(balancePointer, itemNumber);
+		}
+	}
+	else
+		//print that no items have been entered
+		printf("Invalid number of Items Entered!\n");
+
+		
+
+	//print the final value of the balance
+	printf("The ending balance is %f\n", balance);
+
+	system("PAUSE");
+	return 0;
+}
+
+//END OF PROGRAM
