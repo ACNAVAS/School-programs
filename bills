@@ -1,0 +1,26 @@
+//bills.c
+//Author: Cesar
+#include<stdio.h>
+int main()
+{
+    //data declaration
+    int amount, twenties, tens, fives, ones;
+    
+    //data assignment
+    printf("Enter an amount: $");
+    scanf("%d", &amount);
+    
+    //data processing
+    twenties = amount / 20;
+    tens = (amount - (20 * twenties )) / 10;
+    fives = (amount - ((20 * twenties) + (10 * tens))) /5;
+    ones = (amount - ((20 * twenties) + (10 * tens) + (5*fives)))/1;
+    //data output
+    printf("$20 bills: %d\n", twenties);
+    printf("$10 bills: %d\n", tens);
+    printf("$5 bills: %d\n", fives);
+    printf("$1 billes: %d\n", ones);
+    
+    system("PAUSE");
+    return 0;
+}
