@@ -1,0 +1,33 @@
+//pointersV6.c
+#include<stdio.h>
+#include<math.h>
+float cir_area;  //to store the result
+void area(float *radius_ptr)
+{
+     printf("The radius that you entered is: %.1f\n", *radius_ptr);
+     //complete the code to find the area of a circle
+    //store the result in the global variable
+    cir_area = 3.14 * pow(*radius_ptr, 2);
+}
+void print_result()
+{
+     //use the global variable to print the result
+     printf("The area of the circle = %.1f\n", cir_area);
+}
+int main()
+{
+    //data declaration
+    float radius; //local var
+    float *rad_ptr;
+    //data assignment
+    printf("Enter the radius of a circle: ");
+    scanf("%f", &radius);
+    rad_ptr = &radius;
+    //data processing
+    area(rad_ptr);
+    //data output
+    print_result();
+    
+    system("PAUSE");
+    return 0;
+}
