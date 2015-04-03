@@ -1,0 +1,23 @@
+//booleanV1.c
+#include<stdio.h>
+#include<stdbool.h>
+int main()
+{
+    bool x, y;
+    int a = 3;
+    int b = 3;
+    y = (a == b);
+    x = false;
+    if (x == true)
+       printf("The value for a is true!\n");
+    
+    
+    if (a < b)
+       printf("a is less than b!\n");
+
+    if(y)
+         printf("a is equal to b\n");
+
+     system("PAUSE");
+    return 0;
+}
