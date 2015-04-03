@@ -1,0 +1,41 @@
+//StdDevV4.c
+//Cesar Navas Working with Jaime Hassett
+
+
+#include <stdio.h>
+#include <math.h>
+float std_dev(float sample[], int x);
+
+int main()
+{
+	int i, x;
+	
+
+	printf("Enter the size of your sample: ");
+	scanf("%d", &x);
+	float sample[x];
+	printf("Enter the values to be evaluated follow each with enter: ");
+	for (i = 0; i<x; i++)
+	{
+		printf("x%d= ", i + 1);
+		scanf("%f", &sample[i]);
+		
+	}
+	printf("\n");
+	printf("Standard Deviation = %.2f\n", std_dev(sample, x));
+	system("pause");
+	return 0;
+
+}
+
+float std_dev(float sample[], int x)
+{
+	float mean = 0.0, sum_deviation = 0.0;
+	int i;
+	for (i = 0; i<x; i++)
+		mean += sample[i];
+	mean = mean / x;
+	for (i = 0; i<x; i++)
+		sum_deviation += (sample[i] - mean)*(sample[i] - mean);
+	return sqrt(sum_deviation / x);
+}
