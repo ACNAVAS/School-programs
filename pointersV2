@@ -1,0 +1,31 @@
+//pointersV2.c
+#include<stdio.h>
+
+void foo(int num3, int *num4)
+{
+     printf("num3 = %d\n", num3);
+     printf("&num3 = %d\n", &num3);
+     printf("*num4 = %d\n", *num4);
+     printf("&num4 = %d\n", &num4);
+     printf("num4 = %d\n", num4);
+}
+
+int main()
+{
+    int num1 = 3;
+    int *num2;
+    
+    
+    
+    printf("num1 = %d\n", num1);
+    printf("&num1 = %d\n", &num1);
+    num2 = &num1;
+    printf("*num2 = %d\n", *num2);
+    printf("&num2 = %d\n", &num2);
+    printf("num2 = %d\n",num2);
+    printf("**************************\n\n");
+    foo(num1, num2);
+    
+    system("PAUSE");
+    return 0;
+}
