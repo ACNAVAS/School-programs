@@ -1,0 +1,50 @@
+//Author: Cesar
+// Kinetic Energy equation (K = 1/2 * mass * velocity^2)
+//Converts pounds to grams
+#include<stdio.h>
+#include<math.h>
+
+float convertTOgrams(float);
+
+int main()
+{
+	float mass, velocity, K;
+	int choice, condition;
+
+	do
+	{
+	
+	printf("1. Enter the mass in Pounds\n");
+	printf("2. Enter the mass in grams\n");
+	scanf("%d", choice);
+	
+	switch(choice)
+	{
+		case 1: printf("Enter the mass in pounds: ");
+				scanf("%f", &mass);
+				mass = convertTOgrams(mass);
+				break;
+		case 2: printf("Enter the mass in grams: ");
+				scanf("%f", &mass);
+				break;
+		default: mass = 0.0;
+	}
+	
+	K = .5 * mass * pow(velocity,2);
+	printf("Kinetic Energy the object had is %f joules\n", K);
+	
+	printf("Do you want to calculate another object's Kinetic Energy? ('1' Yes or '2' No)");
+	scanf("%d", &condition);
+	
+	}while(condition == 1);
+	
+	
+	
+	system("PAUSE");
+	return 0;
+}
+
+float convertTOgrams(float mass)
+{
+	return mass * 453.592;
+}
