@@ -1,0 +1,24 @@
+//recAreaV1.c
+#include<stdio.h>
+
+int main()
+{
+    //declare the vraibales for the length and width
+    float width, length;
+    
+    //Enter the values for the variables
+    printf("Enter the width of the rectangle: ");
+    scanf("%f", &width);
+    printf("Enter the length of the rectangle: ");
+    scanf("%f", &length);
+    
+    //validate the values to be positive then claculate the area
+    //and print it, in case of invalid input: print an error message
+    if (width > 0 && length > 0)
+       printf("The area = %.2f\n", length*width);
+    else
+        printf("Error:  You can't have a negative or null area\n");
+        
+    system("PAUSE");
+    return 0;
+}
