@@ -1,0 +1,23 @@
+//pointersV7.c
+#include<stdio.h>
+void foo1(float *myNum)
+{
+     
+     *myNum = 0;
+     *myNum = 0.2;
+ }
+ 
+ int main()
+ {
+     float num = 23.7;
+     float *num_ptr;
+     
+     printf("num = %.2f\n", num);
+     num_ptr = &num;
+     foo1(num_ptr);
+     printf("After calling foo1()\n");
+     printf("num = %.2f\n", num);
+     
+     system("PAUSE");
+     return 0;
+ }
