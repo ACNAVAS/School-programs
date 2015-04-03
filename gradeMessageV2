@@ -1,0 +1,27 @@
+//gradeMessageV2.c
+#include<stdio.h>
+int main()
+{
+    char letter_grade;
+    
+    printf("Enter a letter grade: ");
+    scanf("%c", &letter_grade);
+    
+    if (letter_grade == 'a' || letter_grade == 'A')
+       printf("You got an A: Excellent!\n");
+    
+    if (letter_grade == 'b' || letter_grade == 'B')
+       printf("You got a B: Good job!\n");
+    
+    if (letter_grade == 'c' || letter_grade == 'C')
+       printf("you got a C: Okay!\n");
+    
+    if (letter_grade == 'd' || letter_grade == 'D')
+       printf("you got a D: You could have done better!\n");
+    
+    if (letter_grade == 'f' || letter_grade == 'F')
+       printf("you got an F: FAIL!\n");
+    
+    system("PAUSE");
+    return 0;
+}
