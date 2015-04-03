@@ -1,0 +1,32 @@
+//diagonalV1.c
+#include<stdio.h>
+#include<math.h>
+
+float diag(float, float);
+
+
+int main()
+{
+    float height, length, diagonal;
+    //enter the value for height and length
+    printf("Enter the height of the rectangle: ");
+    scanf("%f", &height);
+    printf("Enter the length of the rectangle: ");
+    scanf("%f", &length);
+    //validate the inputs before calling the function diag()
+    
+    if(height >= 0 && length >= 0)
+        diagonal = diag(height, length);
+    else
+        diagonal = -1;
+    
+    printf("The value for the diagolan is: %.2f\n", diagonal);
+    
+    system("PAUSE");
+    return 0;
+}
+
+float diag(float h, float l)
+{
+      return sqrt(pow(l, 2) + pow(h,2));
+}
