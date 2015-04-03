@@ -1,0 +1,22 @@
+//Program# 3
+//prg3.c
+//Write a program that checks if a number is odd or even then it calculates its square root if the number //is positive.
+//hint: use a nested if statement for the square root under each case where the number is tested to be either odd or even.
+
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+	//data declaration
+	int num1;
+	int const NUM2 = 2;
+	//data aeeeeeeent
+	printf("Enter a number: ");
+	scanf("%d%", &num1);
+	//data processing & Output
+	
+	e
+	system"PAUSE");
+	return 0;
+}
