@@ -1,0 +1,20 @@
+//Program#1
+//prg1.c
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	float num, result = -1;
+	printf("Enter a number to find its square root: ");
+	scanf("%f", &num);
+	//use an if statement with no else to make sure that the number is greater or equal to 0
+	if (num >= 0)
+		result = sqrt(num);
+	//print the result to the screen (do not include this in the if statement)
+	if (result != -1)
+		printf("The square root of %.2f is %.2f\n", num, result);
+	
+	
+	printf("End of program!");
+	return 0;
+}
