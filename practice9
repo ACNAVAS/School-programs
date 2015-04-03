@@ -1,0 +1,32 @@
+//practice 9
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+	int num1;
+	int const NUM2 = 2;
+	
+	printf("Enter a number: ");
+	scanf("%d", &num1);	
+	
+	if (num1%NUM2 ==0)
+	{
+		printf("The number is even!\n");
+		if (num1 >= 0)
+			printf("the square root of %.2d is %.2f\n", num1, sqrt(num1));
+		else 
+			("Invalid Entry!\n");
+	}	
+	else
+	{
+		printf("The number is odd!\n");
+		if (num1 >= 0)
+			printf("the square root of %.2d is %.2f\n", num1, sqrt(num1));
+		else 
+			("Invalid Entry!\n");
+	}
+	
+	system("PAUSE");
+	return 0;
+}
