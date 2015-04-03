@@ -1,0 +1,22 @@
+//reversal.c
+//Author: Cesar
+#include<stdio.h>
+int main()
+{
+    //data declaration
+    int num;
+    int first, second;
+    
+    //data assignment
+    printf("Enter a two digit integer: ");
+    scanf("%d", &num);
+    
+    //data processing
+    first = num /10;
+    second = num % 10;
+    
+    //data output
+    printf("%d%d\n", second, first);
+    system("PAUSE");
+    return 0;
+}
