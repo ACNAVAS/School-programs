@@ -1,0 +1,24 @@
+//cone_volume.c
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    //data declaration
+    float radius, height;  //data input
+    float volume; //data output
+    const float PI = 3.14;
+    
+    //data assignment
+    printf("Enter the radius of the cone: ");
+    scanf("%f", &radius);
+    printf("Enter the height of the cone: ");
+    scanf("%f", &height);
+    
+    //data processing
+    volume = (PI * pow(radius, 2) *height)*(float)(1)/3;
+    
+    //data output
+    printf("The volume of the cone = %.2f\n", volume);
+    system("PAUSE");
+    return 0;
+}
