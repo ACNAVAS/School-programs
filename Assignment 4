@@ -1,0 +1,51 @@
+//Author:Cesar Navas
+//Assignment 4
+//10-21-2013
+#include<stdio.h>
+
+float max_num, min_num;
+
+void num_set1()
+{
+	int num1 = 3;
+	int num2 = 4;
+	printf("|_________________||You chose set 1: %d, %d||_____________________|\n", num1, num2);
+	printf("_______________________________________________________________________\n");
+}
+
+void num_set2()
+{
+	int num3 = 5;
+	int num4 = 7;
+	int num5 = 9384;
+	printf("|_________________||You chose set 2: %d, %d, %d||_____________________|\n", num3, num4, num5);
+	printf("_______________________________________________________________________\n");
+}
+
+int main()
+{
+	char set;
+	
+	printf("There are 2 number sets, one called 1 the other 2, which do you choose: ");
+	scanf("%c", &set);
+	printf("_______________________________________________________________________\n");
+	
+	switch(set)
+	{
+		case '1' :
+			num_set1();
+			printf("Congratulations! You have chosen a set!\n");
+			break;
+			
+		case '2' :
+			num_set2();
+			printf("Congratulations! You have chosen a set!\n");
+			break;
+		default	:
+			printf("Not a valid number set!\n");	
+	}
+	
+	
+	system("PAUSE");
+	return 0;
+}
