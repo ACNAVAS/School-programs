@@ -1,0 +1,42 @@
+//radius.c Author: Cesar Navas
+#include<stdio.h>  //for standard input output
+#include<math.h> //for math functions
+
+//prototype a function that returns a float and accepts a float in its parameter list. Call 
+float findRadius (float );
+ 
+//findRadius
+
+int main()
+{
+	//declare a variable to store the area and another to store the radius and prime the loop
+	float area, radius;
+	int condition;
+
+	//enter a loop
+	do
+	{
+	//ask the user to enter the area of a circle
+	printf("Enter the area of the circle: ");
+	scanf("%f", &area);
+	//call the function findRadius
+	radius = findRadius(area);
+	//display the value of the radius
+	printf("The value of the radius is %f\n", radius);
+	//ask the user if they want to enter another value to control the loop
+	printf("Do it again!?('1' Yes or '2' NO) ");
+	scanf("%d", &condition);
+	}while(condition == 1);
+	system("PAUSE");
+	return 0;
+} 
+//define the function findRadius where it accepts a parameter that allows for passing by value from the
+//the function that called it.  The value must be the area of the circle. 
+//the function will then return the value of the radius
+	float findRadius(float area)
+{
+	//area = PI * radius^2  Ò deduce the radius from this
+
+	return  sqrt(area / 3.14);
+}
+//END OF PROGRAM
