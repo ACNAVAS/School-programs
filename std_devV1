@@ -1,0 +1,28 @@
+//std_devV1.c
+//Author: Cesar
+//This program will calculate the standard
+//deviation of a set of four integers
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    //data declaration
+    int x1, x2, x3, x4;
+    float n = 4.0f;
+    float mean, std_dev;
+    
+    //data assignment
+    printf("Enter the sample of four integers: ");
+    scanf ("%d %d %d %d", &x1, &x2, &x3, &x4);
+    
+    //data processing
+    mean = (x1 + x2 + x3 + x4) / n;
+    
+    std_dev = sqrt((pow(x1-mean,2) + pow(x2-mean,2) + pow(x3-mean, 2) + pow(x4-mean, 2)) /(n - 1));
+    
+    //data output
+    printf("The mean of the sample = %.2f\n", mean);
+    printf("The standard deviation = %.2f\n", std_dev);
+    system("PAUSE");
+    return 0;
+}
