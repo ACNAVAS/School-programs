@@ -1,0 +1,21 @@
+//checkAge.c
+#include<stdio.h>
+
+int main()
+{
+    const int AGE_LIMIT = 18;
+    int user_age;
+    
+    //ask the user to enter their age
+    printf("Enter your age: ");
+    scanf("%d", &user_age);
+    //compare the age to the limit and print accept/reject
+    if (user_age >= AGE_LIMIT)
+       printf("Come on in!\n");
+    else
+        printf("Go away!\n");
+    
+    
+    system("PAUSE");
+    return 0;
+}
