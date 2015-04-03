@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main()
+{
+    int age;
+    age = 18;
+    printf("Hello World!\n");
+    printf("I am over %d of age\n", age);
+    age = 178;
+    printf("I am over %d of age\n", age);
+    system("PAUSE");
+    return 0;
+}
