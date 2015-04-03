@@ -1,0 +1,61 @@
+//Author: Cesar Navas
+//FinalExamReview1.c
+//final velocity
+
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+	const float gravity = 9.8;
+	float time, distance, feettime;
+	int choice;
+	int condition;
+	do
+	{
+	
+	printf("Do you want to continue in feet(1) or meter(2)?");
+	scanf("%d", &choice);
+	
+	if(choice == 2 || choice == 1)
+	{
+		if(choice ==2)
+		{
+			printf("How tall is the cliff in meters: ");
+			scanf("%f", &distance);
+			
+			if( distance > 0)
+				time = sqrt((2 * distance) / gravity);
+			else
+				time = 0.0;
+	
+			printf("It took the object %.1f seconds to hit the ground!\n", time);
+		}
+		else
+		{
+			printf("How tall is the cliff in feet: ");
+			scanf("%f", &distance);
+
+			if( distance > 0)
+			{
+			
+				time = sqrt(( 3.3 * distance) / gravity);
+				feettime = time / 3.3;
+			}
+			else
+				time = 0.0;
+		
+	
+			printf("It took the object %.1f seconds to hit the ground!\n", feettime);	
+		}
+	}
+	else
+		printf("INVALID CHOICE!\n");
+		
+		printf("Do you want to enter another distance?(1 y/2 n)");
+		scanf("%d", &condition);
+	} while (condition == 1); 
+	
+	system("PAUSE");
+	return 0;
+}
