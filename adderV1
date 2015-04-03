@@ -1,0 +1,19 @@
+//adderV1.c
+//Author: Cesar
+//This program will add two numbers
+#include<stdio.h>
+int main()
+{
+    int a, b, c;
+    
+    a = 16;
+    b = 20;
+    
+    c = a + b;
+    
+    printf("%d + %d = %d", a, b, c);
+    printf("\n");
+    
+    system("PAUSE");
+    return 0;
+}
