@@ -1,0 +1,40 @@
+//gradesV1.c
+#include<stdio.h>
+int main()
+{
+    float grade;
+    const float MIN = 0.0;
+    const float MAX = 100;
+    
+    printf("Enter the grade: ");
+    scanf("%f", &grade);
+    
+    if (grade >= MIN  && grade <= MAX)
+    {
+       printf("The grades is within range!\n");
+       if (grade >= 90)
+          printf("A\n");
+          
+       if (grade >= 80  && grade < 90)
+          printf("B\n");
+       
+       if (grade >= 70 && grade < 80)
+          printf("C\n");
+       
+       if (grade >= 60 && grade < 70)
+          printf("D\n");
+       
+       if (grade < 60)
+          printf("F\n");
+      
+       }
+       
+    else
+    {
+        printf("The grade is not in the correct range!\n");
+        printf("Next time enter a grade between 0 and 100\n");
+        }
+    
+    system("PAUSE");
+    return 0;
+}
