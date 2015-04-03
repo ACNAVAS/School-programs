@@ -1,0 +1,50 @@
+//rectangleV3.c
+//Author: Cesar
+//calculate the perimeter, area, diagonal
+#include<stdio.h>
+#include<math.h>
+float rec_area(float , float ); //function prototypes
+float rec_perimter(float , float);
+float rec_diagonal(float *, float *);
+
+int main()
+{
+    //data declaration
+    float sideA, sideB, result;
+    
+    //data assignment
+    printf("Enter side A: ");
+    scanf("%f", &sideA);
+    printf("Enter side B: ");
+    scanf("%f", &sideB);
+    
+    //data processing
+    result = rec_area(sideA, sideB);
+    
+    //data output
+    
+    printf("The area of the rectangle is: %.2f\n", result);
+    
+    
+    printf("The perimeter of the rectangle is: %.2f\n", rec_perimter(sideA, sideB));
+    printf("The diagonal of the rectangle is %.2f\n", rec_diagonal(&sideA, &sideB));
+    system("PAUSE");
+    return 0;
+}
+
+float rec_area(float a, float b)
+{
+     float area = a * b;
+     return area;
+}
+
+float rec_perimter(float a, float b)
+{
+      return 2 *( a + b);
+}
+
+float rec_diagonal(float *a, float *b)
+{
+      return sqrt(pow(*a, 2) + pow(*b, 2));
+}
+      
