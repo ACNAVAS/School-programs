@@ -1,0 +1,21 @@
+//polyV2.c
+//Author: Cesar
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    //data declaration
+    float x, y;
+    
+    //data assignmnet
+    printf("Enter x: ");
+    scanf("%f", &x);
+    
+    //data processing
+    y = ((((3*x + 2)*x - 5)*x -1)*x + 7)*x -6;
+    
+    //data output
+    printf ("The polynomial yields: %.0f\n", y);
+    system("PAUSE");
+    return 0;
+}
