@@ -1,0 +1,21 @@
+//gradeMessageV3.c
+#include<stdio.h>
+int main()
+{
+    char letter_grade;
+    
+    printf("Enter a letter grade: ");
+    scanf("%c", &letter_grade);
+    
+    switch(letter_grade)
+    {
+        case 'a': printf("You got an A: excellent!\n");
+                  break;
+        case 'b': printf("you got a B: Good Job!\n");
+                  break;
+        default: printf("You entered an invalid letter grade!\n");
+    }
+    
+    system("PAUSE");
+    return 0;
+}
