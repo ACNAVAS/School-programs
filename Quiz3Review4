@@ -1,0 +1,52 @@
+//Program# 4
+//prg4.c
+//switch statement
+
+int menu(float angle)
+{
+	//declare the variable that will hold a value to be returned by this function
+	int choice;
+	printf("Trig Menu\n");
+	printf("========\n");
+	printf("1. Find the cos of %.2f \n", angle);
+	printf("2. Find the sin of  %.2f\n", angle);
+	printf("Enter your choice: ");
+	scanf("%d", &choice);
+	return choice;
+}
+int main()
+{
+	//Declare the variables needed for this program
+	int option;
+	float angle_deg, angle_rad, result;
+		
+	//ask the user to enter an angle in degrees
+	printf("Enter the angle in degrees: ");
+	scanf("%f", &angle_deg);	
+	
+	system("CLS");
+	//convert the angle to radians
+	angle_rad = (angle_deg * 3.14) / 180;
+	
+	//call the menu but pass the angle that's in degrees to it
+	option = menu(angle_deg);
+	
+	//use a switch statement to calculate the cos or sin of the angle (in radians)
+	system("CLS");
+	switch(option)
+	{
+		case 1: result = cos(angle_rad);
+			printf("cos %.2f is %.2f\n", angle_deg, result);
+			break;
+		case 2: result = sin(angle_rad);
+			printf("sin %.2f is %.2f\n", angle_deg, result);
+			break;
+		defualt: printf("WHAT ARE YOU DOING YOU IDIOT!\n");
+	}	
+
+	//display the result
+
+	return 0;
+}
+
+//Redo Program #4 using a loop with an exit condition within main().
