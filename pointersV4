@@ -1,0 +1,30 @@
+//pointersV4.c
+#include<stdio.h>
+float g_var = 7.8;
+
+void foo(float a, float b, float c)
+{
+     printf("The global variable is: %.1f\n", g_var);
+     printf("The local var a = %.1f\n", a);
+     printf("the local var b = %.1f\n", b);
+     printf("the local var c = %.1f\n", c);
+}
+int main()
+{
+    //data declaration
+    float num1, num2, num3;
+    
+    //data assignment
+    num1 = 3.3;
+    num2 = 2.2;
+    num3 = 8.8;
+    //data processing
+    
+    //data output
+    foo(num1, num2, num3);
+    foo(num2, num3, num1);
+    foo(0.0, 9.9, 0.2);
+    
+    system("PAUSE");
+    return 0;
+}
