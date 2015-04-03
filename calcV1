@@ -1,0 +1,88 @@
+//CalculatorV!.c
+#include<stdio.h>
+#include<math.h>
+
+char main_menu()
+{
+	char choice;
+	printf("\t\tMain Menu\n");
+	printf("\t\t=========\n");
+	printf("\t\tA. Addition\n");
+	printf("\t\tS. Substraction\n");
+	printf("\t\tM. Multiplication\n");
+	printf("\t\tD. Division\n");
+	printf("\t\tX. Exit\n");
+	printf("\nEnter your choice: ");
+	scanf("%c", &choice);
+	return choice;
+}
+void add()
+{
+	float num1, num2, result;
+	printf("Addition Function\n");
+	printf("=================\n");
+	printf("Enter a number: ");
+	scanf("%f", &num1);
+	printf("Enter another number: ");
+	scanf("%f", &num2);
+	result = num1 + num2;
+	printf("%.2f + %.2f = %.2f\n", num1, num2, result);
+}
+void sub()
+{
+	float num1, num2, result;
+	printf("Subtraction Function\n");
+	printf("=================\n");
+	printf("Enter a number: ");
+	scanf("%f", &num1);
+	printf("Enter another number: ");
+	scanf("%f", &num2);
+	result = num1 - num2;
+	printf("%.2f - %.2f = %.2f\n", num1, num2, result);
+}
+void mult()
+{
+	float num1, num2, result;
+	printf("Multiplication Function\n");
+	printf("=================\n");
+	printf("Enter a number: ");
+	scanf("%f", &num1);
+	printf("Enter another number: ");
+	scanf("%f", &num2);
+	result = num1 * num2;
+	printf("%.2f * %.2f = %.2f\n", num1, num2, result);
+}
+void div()
+{
+	float num1, num2, result;
+	printf("Division Function\n");
+	printf("=================\n");
+	printf("Enter a number: ");
+	scanf("%f", &num1);
+	printf("Enter another number: ");
+	scanf("%f", &num2);
+	result = num1 / num2;
+	printf("%.2f / %.2f = %.2f\n", num1, num2, result);
+}
+int main()
+{
+	char option;
+	
+	option = main_menu();
+	system("CLS");
+	if ((option == 'A') || (option == 'a'))
+		add();
+		
+	if ((option == 'S') || (option == 's'))
+		sub();
+		
+	if ((option == 'M') || (option == 'm'))
+		mult();
+		
+	if ((option == 'D') || (option == 'd'))
+		div(); 
+
+	
+	system("PAUSE");
+	return 0;
+}
