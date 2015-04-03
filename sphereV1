@@ -1,0 +1,49 @@
+//sphere.c
+//Author: 
+//area = 4  PI  r^2
+//volume = 4/3 PI r^3
+
+//include the appropriate library files for io and math
+#include<stdio.h>
+#include<math.h>
+
+//declare two global variables to hold the results: volume and area
+float area, volume;
+
+void sphere_area(float *r_ptr)//complete the code needed to pass a reference of the radius 
+{
+	//calculate the area and store the result
+    area = 4 * 3.14 * pow(*r_ptr, 2);
+}
+
+void sphere_volume(float r)//complete the code to pass a value of the radius
+{
+	//calculate the volume and store  the result
+    volume = (4 * 3.14 * pow(r, 3))/3;
+}
+
+int main()
+{
+	//declare the variable radius
+	float radius;
+	//declare any pointers needed 
+    float *radius_ptr;
+    
+	//ask the user to enter a value for the radius
+    printf("Enter the radius of a sphere: ");
+    scanf("%f", &radius);
+    radius_ptr = &radius;
+    
+	//call the sphere_volume function
+    sphere_volume(radius);
+	//call the sphere_area function
+    sphere_area(radius_ptr);
+
+	//display the results
+	printf("The volume of the sphere is: %.2f\n", volume);
+	printf("The area of the sphere is: %.2f\n", area);
+	
+	
+	system("PAUSE");
+	return 0;
+}
