@@ -1,0 +1,25 @@
+//pointersV3.c
+#include<stdio.h>
+
+float num1 = 5.5; //global variable
+void foo(float num3, float num4)
+{
+     float num2 = num3;
+     float local_var = num4;
+     printf("inside foo():num1 = %.1f\n", num1);
+    printf("inside foo():num2 = %.1f\n", num2);
+    printf("Local-var =  %.1f\n", local_var);
+}
+int main()
+{
+    float num2 = 7.8;  //local variable
+    float num3 = 100.5;
+    printf("num1 = %.1f\n", num1);
+    printf("num2 = %.1f\n", num2);
+    printf("num3 = %.1f\n", num3);
+    num1 = 9.2;
+    printf("********************\n");
+    foo(num2, num3); //function call: passing by value
+    system("PAUSE");
+    return 0;
+}
